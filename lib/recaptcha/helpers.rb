@@ -200,7 +200,7 @@ module Recaptcha
             })
           };
 
-          #{recaptcha_v3_define_default_callback(callback); if recaptcha_v3_define_default_callback?(callback, action, options)}
+          #{recaptcha_v3_define_default_callback(callback) if recaptcha_v3_define_default_callback?(callback, action, options)}
         </script>
       HTML
     end
