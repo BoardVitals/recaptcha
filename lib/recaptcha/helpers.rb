@@ -182,12 +182,12 @@ module Recaptcha
             grecaptcha.ready(function() {
               grecaptcha.execute('#{site_key}', {action: '#{action}'}).then(function(token) {
                 //console.log('#{id}', token)
-                #{callback}('#{id}', token)
+                #{callback}('#{id}', token);
               });
             });
           };
           // Invoke immediately
-          #{recaptcha_v3_execute_function_name(action)}()
+          #{recaptcha_v3_execute_function_name(action)}();
 
           // Async variant so you can await this function from another async function (no need for
           // an explicit callback function then!)
